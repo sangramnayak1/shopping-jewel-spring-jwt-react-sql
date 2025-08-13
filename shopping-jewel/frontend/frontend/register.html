@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - ShopEasy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Create Account</h1>
+  <form id="registerForm">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="otpSection" style="display:none;">
+    <h2>Verify Your Email</h2>
+    <input type="text" id="otpCode" placeholder="Enter OTP" required />
+    <button id="verifyOtpBtn">Verify OTP</button>
+  </div>
+
+  <p id="registerMessage"></p>
+
+  <script src="js/auth.js"></script>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', registerUser);
+    document.getElementById('verifyOtpBtn').addEventListener('click', verifyOtp);
+  </script>
+</body>
+</html>

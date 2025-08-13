@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback - ShopEasy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Leave Feedback</h1>
+  <form id="feedbackForm">
+    <textarea id="feedbackMessage" placeholder="Your feedback" required></textarea>
+    <select id="feedbackRating" required>
+      <option value="">Rating</option>
+      <option value="1">1 Star</option>
+      <option value="2">2 Stars</option>
+      <option value="3">3 Stars</option>
+      <option value="4">4 Stars</option>
+      <option value="5">5 Stars</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="feedbackMessageText"></p>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', submitFeedback);
+  </script>
+</body>
+</html>
