@@ -11,7 +11,7 @@
 	<url />
 
 	<parent>
-		<groupId>com.bb.sangram</groupId>
+		<groupId>com.bb.shoppingjewel</groupId>
 		<artifactId>shopping-jewel</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

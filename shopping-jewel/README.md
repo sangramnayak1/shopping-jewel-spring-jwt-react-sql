@@ -1,4 +1,4 @@
-# Project Name: shopping-jewel
+docker compose build --no-cache# Project Name: shopping-jewel
 --------------------------------------------------------------
 The project is build using following stacks
 - Backend: Java Spring-BootHTML
@@ -73,14 +73,22 @@ nginx -c $(pwd)/nginx.conf
 nginx -s stop
 
 # Build all modules under same network through docker-compose.yml
-docker-compose up
-docker-compose down
+1:
+docker-compose up or docker-compose up --build
 
-# Build respective service after any code change
-docker compose build backend --no-cache
-docker compose up -d
-Or
-docker-compose up --build backend
+2:
+docker compose build --no-cache
+docker compose up
+
+3:
+docker compose build backend --no-cache // after any code change
+docker compose up -d // silent build so you can see container status
+OR
+docker compose build frontend --no-cache // after any code change
+docker compose up -d // silent build so you can see container status
+
+4: Finally clean up
+docker-compose down
 
 Note: docker compose or docker-compose both commands work.
 
@@ -124,6 +132,8 @@ curl -X POST http://localhost:8080/api/auth/login \
 docker exec -it bhagyalaxmi-jewel-backend-1 curl -X POST http://localhost:8080/api/auth/login \
  -H "Content-Type: application/json" \
  -d '{"username":"abc","password":"abcpass"}'
+
+Note: To make login work you need to insert user details into DB as per above steps or fix register page.
 
 - Product: Outside container
 curl -f http://localhost:8080/api/products

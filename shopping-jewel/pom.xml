@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bb.sangram</groupId>
+	<groupId>com.bb.shoppingjewel</groupId>
 	<artifactId>shopping-jewel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shopping-jewellery</name>
+	<name>shopping-jewel</name>
 	<description>Demo project using Spring Boot, JWT Login, Static HTML and MySQL</description>
 	<packaging>pom</packaging>
 	<url />
@@ -145,7 +145,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.2.5</version> <!-- match your Spring Boot version -->
 		        <configuration>
-		            <mainClass>com.bb.jcart.ShopApplication</mainClass>
+		            <mainClass>com.bb.shoppingjewel.ShopApplication</mainClass>
 		        </configuration>
             </plugin>
         </plugins>
